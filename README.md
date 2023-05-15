@@ -59,3 +59,4 @@ In Phase 1, we're going to perform some refactoring of a Todo application built 
 - Describe the operation of the hook: `useForm()`.
 
 ### Day 1
+![Context Setting](https://github.com/Ryanb021/todo-app/assets/120413183/c860282b-10b8-4da5-bba2-c91b5d4574ee)
