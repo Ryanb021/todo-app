@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
 export const SettingsContext = React.createContext();
 
-const SettingsProvider = ({ children }) => {
+const SettingsProvider = ({children}) => {
   const [showCompleted, setShowCompleted] = React.useState(false);
-  const [pageItems, setPageItems] = React.useState(3);
+  const [ pageItems, setPageItems ] = React.useState(3);
   const [sort, setSort] = React.useState('difficulty');
 
   const values = {
@@ -15,12 +15,11 @@ const SettingsProvider = ({ children }) => {
     sort,
     setSort,
   };
-
   return (
     <SettingsContext.Provider value={values}>
       {children}
     </SettingsContext.Provider>
   );
-};
+  };
 
 export default SettingsProvider;
