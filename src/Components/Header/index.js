@@ -1,3 +1,4 @@
+
 import { createStyles, Header, Navbar } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
@@ -22,6 +23,7 @@ const useStyles = createStyles((theme) => ({
     marginBottom: theme.spacing.md,
     marginTop: theme.spacing.md,
   }
+
 }))
 
 const AppHeader = ({ incomplete }) => {
@@ -30,11 +32,11 @@ const AppHeader = ({ incomplete }) => {
   return (
     <Header data-testid="todo-header">
       <Navbar className={classes.navbar}>
+      
       </Navbar>
-
-      <h1 data-testid="todo-h1">To Do List: {incomplete} items pending</h1>
+      <h1  data-testid="todo-h1">To Do List: {incomplete} item/s pending</h1>
     </Header>
   )
 }
 
-export default AppHeader;
+export default AppHeader

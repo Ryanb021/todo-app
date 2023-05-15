@@ -74,15 +74,15 @@ const ToDo = () => {
             <form onSubmit={handleSubmit}>
 
               <TextInput
-                placeholder="To Do Item"
+                placeholder="Item Details"
                 name="text"
                 onChange={handleChange}
                 label="To Do Item"
               />
 
               <TextInput
-                placeholder="Name"
-                name="assignee"
+                placeholder="Assignee Name"
+                name="Name"
                 onChange={handleChange}
                 label="Assigned To"
               />
@@ -99,7 +99,7 @@ const ToDo = () => {
                 mb="lg"
               />
 
-              <Button type="submit" variant="gradient" gradient={{ from: 'red', to: 'green', deg: 60 }}>Add Item</Button>
+              <Button type="submit" variant="gradient" gradient={{ from: 'yellow', to: 'green', deg: 60 }}>Add Item</Button>
 
 
             </form>
