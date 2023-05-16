@@ -60,3 +60,5 @@ In Phase 1, we're going to perform some refactoring of a Todo application built 
 
 ### Day 1
 ![Context Setting](https://github.com/Ryanb021/todo-app/assets/120413183/c860282b-10b8-4da5-bba2-c91b5d4574ee)
+![Todo Day1](https://github.com/Ryanb021/todo-app/assets/120413183/f1a8558c-c232-4ad9-850b-43f8c3ffd290)
+
