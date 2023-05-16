@@ -1,5 +1,6 @@
 
 import { createStyles, Header, Navbar } from '@mantine/core';
+import { Link, useNavigate } from 'react-router-dom';
 
 const useStyles = createStyles((theme) => ({
   navbar: {
