@@ -6,16 +6,12 @@ import { v4 as uuid } from 'uuid';
 import List from '../List/index.js';
 import { Button, Card, createStyles, Grid, Slider, Text, TextInput } from '@mantine/core';
 
-
-
 const useStyles = createStyles((theme) => ({
   formHeading: {
     fontSize: theme.fontSizes.lg,
     fontWeight: 'bold',
     color: theme.colors.gray[9],
     marginBottom: theme.spacing.md,
-
-
   },
 }));
 
@@ -81,7 +77,7 @@ const ToDo = () => {
               />
 
               <TextInput
-                placeholder="Assignee Name"
+                placeholder="Name"
                 name="Name"
                 onChange={handleChange}
                 label="Assigned To"
