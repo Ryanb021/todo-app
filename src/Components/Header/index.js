@@ -1,10 +1,10 @@
 
-import { createStyles, Header, Group } from '@mantine/core';
+import { createStyles, Header, Group, Navbar } from '@mantine/core';
 import { Link, useNavigate } from 'react-router-dom';
 
 const useStyles = createStyles((theme) => ({
   navbar: {
-    backgroundColor: theme.colors.blue[8],
+    backgroundColor: theme.colors.red[8],
     color: theme.colors.gray[0],
     width: '100%',
     height: '100%',
@@ -42,6 +42,8 @@ const AppHeader = ({ incomplete, showHomeTab }) => {
         {/* <Link className={classes.link} to="/">HOME</Link> */}
         <Link className={classes.link} to="/settings" onClick={handleSettingsClick}>SETTINGS</Link>
       </Group>
+      <Navbar className={classes.navbar}></Navbar>
+<h1  data-testid="todo-h1">To Do List: {incomplete} item/s pending</h1> 
     </Header>
   )
 }
