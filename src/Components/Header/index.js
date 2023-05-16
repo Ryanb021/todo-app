@@ -17,7 +17,7 @@ const useStyles = createStyles((theme) => ({
   },
   h1: {
     // color: theme.colors.white,
-    backgroundColor: theme.colors.red[8],
+    backgroundColor: theme.colors.gray[8],
     width: '80%',
     margin: 'auto',
     fontSize: theme.fontSizes.lg,
@@ -39,7 +39,7 @@ const AppHeader = ({ incomplete, showHomeTab }) => {
   return (
     <Header data-testid="todo-header">
       <Group>
-        <Link className={classes.link} to="/">HOME</Link>
+        {/* <Link className={classes.link} to="/">HOME</Link> */}
         <Link className={classes.link} to="/settings" onClick={handleSettingsClick}>SETTINGS</Link>
       </Group>
     </Header>
