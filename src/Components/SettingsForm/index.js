@@ -1,5 +1,6 @@
 import { Button, createStyles, Grid, Card, NumberInput, Text, TextInput } from '@mantine/core';
 import { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { SettingsContext } from '../../Context/Settings';
 import { When } from 'react-if';
 
@@ -39,12 +40,13 @@ const SettingsForm = () => {
 
   return (
     <>
+      <h2 className={classes.h2}><Link className={classes.link} to="/">HOME</Link></h2>
       <h1 className={classes.h1}> Manage Settings</h1>
       <Grid style={{ width: '80%', margin: 'auto' }}>
         <Grid.Col xs={12} sm={6}>
           <Card withBorder p="sm">
             <form onSubmit={handleSubmit}>
-              <Text>Updated Settings</Text>
+              <Text>UPDATED SETTINGS</Text>
               <NumberInput
                 mb="sm"
                 value={pageItems}
@@ -66,8 +68,8 @@ const SettingsForm = () => {
             <Card withBorder p="xs">
               <Card.Section>
               </Card.Section>
-              <Text m="sm">items Per Page: {pageItems}</Text>
-              <Text m="sm">Sort Keyword: {sort}</Text>
+              <Text m="sm">ITEMS PER PAGE: {pageItems}</Text>
+              <Text m="sm">SORT KEYWORD: {sort}</Text>
             </Card>
           </When>
         </Grid.Col>
