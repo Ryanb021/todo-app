@@ -1,6 +1,6 @@
 const Footer = () => (
 
-  <footer className="footer">&;copy Ryan Bagan 2023</footer>
+  <footer className="footer">&copy; Ryan Bagan 2023</footer>
 
 );
 
