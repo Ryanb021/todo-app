@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import useForm from '../../hooks/form.js';
 import Header from '../Header';
+import Footer from '../Footer/index.js';
 
 import { v4 as uuid } from 'uuid';
 import List from '../List/index.js';
@@ -32,10 +33,10 @@ const ToDo = () => {
     setList([...list, item]);
   }
 
-  function deleteItem(id) {
-    const items = list.filter(item => item.id !== id);
-    setList(items);
-  }
+  // function deleteItem(id) {
+  //   const items = list.filter(item => item.id !== id);
+  //   setList(items);
+  // }
 
   function toggleComplete(id) {
 
@@ -47,7 +48,6 @@ const ToDo = () => {
     });
 
     setList(items);
-
   }
 
   useEffect(() => {
@@ -106,6 +106,7 @@ const ToDo = () => {
           <List list={list} toggleComplete={toggleComplete} />
         </Grid.Col>
       </Grid>
+      <Footer />
     </>
   );
 };
