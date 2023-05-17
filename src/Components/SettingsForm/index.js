@@ -6,7 +6,7 @@ import { When } from 'react-if';
 
 const useStyles = createStyles((theme) => ({
   h1: {
-    backgroundColor: theme.colors.gray[8],
+    backgroundColor: theme.colors.red[8],
     color: theme.colors.gray[0],
     width: '80%',
     margin: 'auto',
