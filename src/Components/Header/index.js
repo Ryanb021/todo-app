@@ -40,9 +40,9 @@ const AppHeader = ({ incomplete, showHomeTab }) => {
     <Header data-testid="todo-header">
       <Group>
         {/* <Link className={classes.link} to="/">HOME</Link> */}
-        <Link className={classes.link} to="/settings" onClick={handleSettingsClick}>SETTINGS</Link>
+        
       </Group>
-      <Navbar className={classes.navbar}></Navbar>
+      <Navbar className={classes.navbar}><Link className={classes.link} to="/settings" onClick={handleSettingsClick}>SETTINGS</Link></Navbar>
 <h1  data-testid="todo-h1">To Do List: {incomplete} item/s pending</h1> 
     </Header>
   )
