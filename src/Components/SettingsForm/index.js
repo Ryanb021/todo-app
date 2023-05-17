@@ -3,7 +3,6 @@ import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SettingsContext } from '../../Context/Settings';
 import { When } from 'react-if';
-import './SettingsForm.scss';
 
 const useStyles = createStyles((theme) => ({
   h1: {
