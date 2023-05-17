@@ -40,8 +40,9 @@ const SettingsForm = () => {
 
   return (
     <>
-      <h2 className={classes.h2}><Link className={classes.link} to="/">HOME</Link></h2>
-      <h1 className={classes.h1}> Manage Settings</h1>
+      {/* <h2 className={classes.h2}><Link className={classes.link} to="/">HOME</Link></h2> */}
+      <h1 className={classes.h1}><Link className="home" to="/">HOME</Link></h1>
+      <h1 className={classes.h1}>MANAGE SETTINGS</h1>
       <Grid style={{ width: '80%', margin: 'auto' }}>
         <Grid.Col xs={12} sm={6}>
           <Card withBorder p="sm">
