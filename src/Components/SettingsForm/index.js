@@ -1,4 +1,4 @@
-import { Button, createStyles, Grid, Card, NumberInput, Text, TextInput } from '@mantine/core';
+import { Button, createStyles, Grid, Card, NumberInput, Text, TextInput, Center } from '@mantine/core';
 import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SettingsContext } from '../../Context/Settings';
@@ -6,9 +6,9 @@ import { When } from 'react-if';
 
 const useStyles = createStyles((theme) => ({
   h1: {
-    backgroundColor: theme.colors.red[8],
+    backgroundColor: theme.colors.green[8],
     color: theme.colors.gray[0],
-    width: '80%',
+    width: '100%',
     margin: 'auto',
     fontSize: theme.fontSizes.lg,
     padding: theme.spacing.md,

@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const useStyles = createStyles((theme) => ({
   navbar: {
-    backgroundColor: theme.colors.red[8],
+    backgroundColor: theme.colors.green[8],
     color: theme.colors.gray[0],
     width: '100%',
     height: '100%',
