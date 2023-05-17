@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import useForm from '../../hooks/form.js';
+import useForm from '../../hooks/form.jsx';
 import Header from '../Header';
-import Footer from '../Footer/index.js';
+import Footer from '../Footer/index.jsx';
 
 import { v4 as uuid } from 'uuid';
-import List from '../List/index.js';
+import List from '../List/index.jsx';
 import { Button, Card, createStyles, Grid, Slider, Text, TextInput } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
@@ -33,10 +33,10 @@ const ToDo = () => {
     setList([...list, item]);
   }
 
-  // function deleteItem(id) {
-  //   const items = list.filter(item => item.id !== id);
-  //   setList(items);
-  // }
+  function deleteItem(id) {
+    const items = list.filter(item => item.id !== id);
+    setList(items);
+  }
 
   function toggleComplete(id) {
 

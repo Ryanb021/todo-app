@@ -1,8 +1,8 @@
-import { Button, createStyles, Grid, Card, NumberInput, Text, TextInput, Center } from '@mantine/core';
+import { Button, createStyles, Grid, Card, NumberInput, Text, TextInput, } from '@mantine/core';
 import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SettingsContext } from '../../Context/Settings';
-import { When } from 'react-if';
+import { Switch, When } from 'react-if';
 
 const useStyles = createStyles((theme) => ({
   h1: {
@@ -14,29 +14,48 @@ const useStyles = createStyles((theme) => ({
     padding: theme.spacing.md,
     marginBottom: theme.spacing.md,
     marginTop: theme.spacing.md,
-  }
-}));
+  },
+
+  formHeading: {
+    fontSize: theme.fontSizes.lg,
+    fontWeight: 'bold',
+  },
+}))
 
 const SettingsForm = () => {
-
-  const [show, setShow] = useState(false);
-  
-  const { showComplete,
-   
+  const { classes } = useStyles();
+  const {
+    showCompleted,
     pageItems,
-    setPageItems,
     sort,
+    setShowCompleted,
+    setPageItems,
     setSort,
     saveLocally,
   } = useContext(SettingsContext);
 
-  const { classes } = useStyles();
-
+  const [show, setShow] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
     setShow(true);
-    saveLocally({ showComplete, pageItems, sort});
+    saveLocally({ showCompleted, pageItems, sort })
   }
+  // const { showComplete,
+   
+  //   pageItems,
+  //   setPageItems,
+  //   sort,
+  //   setSort,
+  //   saveLocally,
+  // } = useContext(SettingsContext);
+
+  // const { classes } = useStyles();
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   setShow(true);
+  //   saveLocally({ showComplete, pageItems, sort});
+  // }
 
   return (
     <>
@@ -48,12 +67,19 @@ const SettingsForm = () => {
           <Card withBorder p="sm">
             <form onSubmit={handleSubmit}>
               <Text>UPDATED SETTINGS</Text>
+
+              <Switch
+              label="Show Completed Todos"
+              checked={ showCompleted }
+              onChange={(event) => setShowCompleted(event.currentTarget.checked)}
+              />
+
               <NumberInput
                 mb="sm"
-                value={pageItems}
-                label="Items Per Page"
                 onChange={(value) => setPageItems(value)}
+                label="Items Per Page"
               />
+
               <TextInput
                 mb="sm"
                 placeholder={sort}
@@ -68,7 +94,9 @@ const SettingsForm = () => {
           <When condition={show}>
             <Card withBorder p="xs">
               <Card.Section>
+                <Text m="x1">UPDATED SETTINGS</Text>
               </Card.Section>
+              <Text m="sm">{showCompleted ? 'Show' : 'Hide'} Completed ToDos</Text>
               <Text m="sm">ITEMS PER PAGE: {pageItems}</Text>
               <Text m="sm">SORT KEYWORD: {sort}</Text>
             </Card>
