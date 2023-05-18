@@ -11,15 +11,6 @@ const SettingsProvider = ({children}) => {
     localStorage.setItem('todo', JSON.stringify({ pageItems, sort, }));
   }
 
-  useEffect(() => {
-    let storage = JSON.parse(localStorage.getItem('todo'));
-    if (storage){
-      setShowCompleted(storage.showCompleted);
-      setPageItems(storage.pageItems);
-      setSort(storage.sort);
-    }
-  }, [])
-
   const values = {
     showCompleted,
     setShowCompleted,
@@ -28,7 +19,18 @@ const SettingsProvider = ({children}) => {
     sort,
     setSort,
     saveLocally
-  };
+  }
+
+  useEffect(() => {
+    let storage = JSON.parse(localStorage.getItem('todo'));
+    if (storage){
+      console.log('storage: ', storage);
+      setShowCompleted(storage.showCompleted);
+      setPageItems(storage.setPageItems ? storage.setPageItems : 3);
+      setSort(storage.sort);
+    }
+  }, []);
+
   return (
     <SettingsContext.Provider value={values}>
       {children}
