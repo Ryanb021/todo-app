@@ -58,7 +58,7 @@ const List = ({ list, toggleComplete, deleteItem }) => {
                   </Else>
                 </If>
 
-                <Text>{item.assignee}</Text>
+                <Text>{item.Name}</Text>
               </Group>
               <Auth capability="delete">
                 <CloseButton title="Delete ToDo Item" onClick={() => deleteItem(item.id)} />

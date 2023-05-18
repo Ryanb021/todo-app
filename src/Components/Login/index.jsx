@@ -18,7 +18,7 @@ const Login = () => {
     <>
       <If condition={isLoggedIn}>
         <Then>
-          <Button color="red" onClick={handleLogout}>Log Out</Button>
+          <Button color="pink" onClick={handleLogout}>Log Out</Button>
         </Then>
         <Else>
           <Group>
@@ -31,7 +31,7 @@ const Login = () => {
               placeholder="Password"
 
             />
-            <Button color="gray.8" onClick={() => login(username, password)}>Login</Button>
+            <Button color="pink.8" onClick={() => login(username, password)}>Login</Button>
           </Group>
 
         </Else>

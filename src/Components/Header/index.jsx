@@ -32,7 +32,7 @@ const useStyles = createStyles((theme) => ({
 
 }))
 
-const AppHeader = ({ incomplete, showHomeTab }) => {
+const AppHeader = ({ incomplete }) => {
   const { classes } = useStyles();
   // const navigate = useNavigate();
 
@@ -42,20 +42,15 @@ const AppHeader = ({ incomplete, showHomeTab }) => {
 
   return (
     <Header data-testid="todo-header">
-      {/* <Group>
-        <Link className={classes.link} to="/">HOME</Link>
-        
-      </Group> */}
       <Navbar className={classes.navbar}>
         <Group position="apart">
           <Group>
-          <Link className={classes.link} to="/settings">SETTINGS</Link>
+            <Link className={classes.link} to="/" default>Home</Link>
+            <Link className={classes.link} to="/settings">Settings</Link>
           </Group>
           <Login />
-          </Group>
-          </Navbar>
-        {/* <Link className={classes.link} to="/settings" onClick={handleSettingsClick}>SETTINGS</Link></Navbar> */}
-          <h1  data-testid="todo-h1">To Do List: {incomplete} item/s pending</h1> 
+        </Group>
+      </Navbar>
     </Header>
   )
 }
