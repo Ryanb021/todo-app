@@ -1,6 +1,5 @@
 import { Button, createStyles, Grid, Card, NumberInput, Text, TextInput, } from '@mantine/core';
 import { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { SettingsContext } from '../../Context/Settings';
 import { Switch, When } from 'react-if';
 
@@ -60,13 +59,13 @@ const SettingsForm = () => {
   return (
     <>
       {/* <h2 className={classes.h2}><Link className={classes.link} to="/">HOME</Link></h2> */}
-      <h1 className={classes.h1}><Link className="home" to="/">HOME</Link></h1>
+      {/* <h1 className={classes.h1}><Link className="home" to="/">HOME</Link></h1> */}
       <h1 className={classes.h1}>MANAGE SETTINGS</h1>
       <Grid style={{ width: '80%', margin: 'auto' }}>
         <Grid.Col xs={12} sm={6}>
           <Card withBorder p="sm">
             <form onSubmit={handleSubmit}>
-              <Text>UPDATED SETTINGS</Text>
+              <Text>UPDATE SETTINGS</Text>
 
               <Switch
               label="Show Completed Todos"

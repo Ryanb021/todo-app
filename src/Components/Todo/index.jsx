@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import useForm from '../../hooks/form.jsx';
-import Header from '../Header';
+import Header from '../Header/index.jsx';
 import Footer from '../Footer/index.jsx';
 
 import { v4 as uuid } from 'uuid';
