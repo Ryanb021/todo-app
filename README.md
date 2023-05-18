@@ -66,5 +66,11 @@ In Phase 1, we're going to perform some refactoring of a Todo application built 
 ![ToDo Day2](https://github.com/Ryanb021/todo-app/assets/120413183/4bcbcebf-97d6-429a-adb1-290cd54e7d1e)
 ![Settings   Storage](https://github.com/Ryanb021/todo-app/assets/120413183/f5667748-4750-470d-ab41-ec61d7cbcb0c)
 
+### Day 3
+![Login](https://github.com/Ryanb021/todo-app/assets/120413183/97a54fbf-571b-4a76-bbf0-abfe1f8c3204)
+![Logged In](https://github.com/Ryanb021/todo-app/assets/120413183/2ea13013-e313-4e1e-af8c-d4714b53dc0c)
+![Settings](https://github.com/Ryanb021/todo-app/assets/120413183/cb59997c-8ef9-462f-9d0c-f679abe80187)
+
+
 
 
